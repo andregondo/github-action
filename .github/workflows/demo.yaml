@@ -1,0 +1,38 @@
+name: Demo pipeline  
+
+on:
+    push:
+        branches:
+            - main
+            - dev
+    pull_request:
+        branches: [main, dev]
+    schedule:
+      - cron: '*/2 * * * *'
+
+jobs:
+    setup_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: create file
+              run: touch github-action.txt
+            - name: print echo hello world
+              run: echo hello world
+            - name: display readme file
+              run: 
+
+
+    build_job:
+        runs-on: windows-latest
+        steps:
+            - name: display hello
+              run: echo hello
+    deploy_job:
+        runs-on: macos-latest
+        steps:
+            - run: echo hello mac
+              
+
+            
+        
+
