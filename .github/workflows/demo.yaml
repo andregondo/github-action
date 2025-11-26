@@ -19,7 +19,7 @@ jobs:
             - name: print echo hello world
               run: echo hello world
             - name: display readme file
-              run: 
+              run: cat README.md
 
 
     build_job:
